@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx next *)",
+      "Bash(npm install *)",
+      "Bash(npx shadcn@latest add @aceternity/3d-globe)",
+      "Bash(npx shadcn@latest init -d)",
+      "Bash(git add *)"
+    ]
+  }
+}

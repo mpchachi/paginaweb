@@ -1,0 +1,114 @@
+"use client";
+
+import { Counter } from "@/components/counter";
+
+export function Market() {
+  return (
+    <section id="market" className="pt-32 pb-24 md:pt-40 md:pb-32">
+      <div className="max-w-[1200px] mx-auto px-6">
+        <div className="mb-16 animate-on-scroll">
+          <p className="text-xs font-medium text-amber-400 uppercase tracking-wider mb-3">
+            Market opportunity
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">
+            A massive, underserved market
+          </h2>
+          <p className="text-white/50 leading-relaxed max-w-[60ch]">
+            Post-stroke rehabilitation is one of the largest unmet needs in
+            digital health — and it's growing.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-5 mb-12">
+          <div className="animate-on-scroll delay-1 border border-white/10 rounded-2xl p-7 bg-white/5 text-center">
+            <p className="text-xs font-medium text-white/40 uppercase tracking-wider mb-3">
+              TAM
+            </p>
+            <p className="text-4xl font-bold text-white mb-2">
+              $<Counter end={279} />B
+            </p>
+            <p className="text-sm text-white/50 leading-relaxed">
+              Global neurorehabilitation + digital health technologies
+            </p>
+          </div>
+          <div className="animate-on-scroll delay-2 border border-white/10 rounded-2xl p-7 bg-white/5 text-center">
+            <p className="text-xs font-medium text-white/40 uppercase tracking-wider mb-3">
+              SAM
+            </p>
+            <p className="text-4xl font-bold text-white mb-2">
+              $8-12B
+            </p>
+            <p className="text-sm text-white/50 leading-relaxed">
+              Post-stroke rehab monitoring in U.S., Germany, France, Spain
+            </p>
+          </div>
+          <div className="animate-on-scroll delay-3 border border-amber-400/20 rounded-2xl p-7 bg-amber-400/10 text-center">
+            <p className="text-xs font-medium text-amber-400 uppercase tracking-wider mb-3">
+              SOM (Year 3)
+            </p>
+            <p className="text-4xl font-bold text-amber-400 mb-2">
+              0.5-1%
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed">
+              500-1,000 subscribers or 5,000-15,000 monthly active patients
+            </p>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="animate-on-scroll delay-4 border border-white/10 rounded-2xl p-7 bg-white/5">
+            <h3 className="text-base font-semibold text-white mb-5">
+              Why now
+            </h3>
+            <div className="space-y-3">
+              {[
+                "Rising stroke prevalence globally",
+                "Increasing strain on rehabilitation workforces",
+                "Shift toward digital health and remote care",
+                "Computer vision / AI now accessible without hardware",
+                "Value-based care models incentivize outcomes",
+                "Patients already have cameras on their phones",
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3">
+                  <svg className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                  </svg>
+                  <span className="text-sm text-white/60">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="animate-on-scroll delay-5 border border-white/10 rounded-2xl p-7 bg-white/5">
+            <h3 className="text-base font-semibold text-white mb-5">
+              Business model
+            </h3>
+            <div className="space-y-6">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white/5 rounded-xl p-4 text-center">
+                  <p className="text-2xl font-bold text-white font-mono">
+                    $149-249
+                  </p>
+                  <p className="text-xs text-white/50 mt-1">per clinician / month</p>
+                </div>
+                <div className="bg-white/5 rounded-xl p-4 text-center">
+                  <p className="text-2xl font-bold text-white font-mono">
+                    $45-65
+                  </p>
+                  <p className="text-xs text-white/50 mt-1">per patient / month</p>
+                </div>
+              </div>
+              <div className="border-t border-white/5 pt-4">
+                <p className="text-sm text-white/50 leading-relaxed">
+                  <span className="font-medium text-white/80">B2B SaaS.</span>{" "}
+                  Hospitals and rehab clinics subscribe. Patients are users, not
+                  payers. Value-based contracts as a future phase.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

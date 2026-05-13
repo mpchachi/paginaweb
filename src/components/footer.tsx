@@ -1,13 +1,13 @@
 export function Footer() {
   return (
-    <footer className="py-8 border-t border-stone-200">
+    <footer className="py-8 border-t border-white/10">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <p className="text-sm text-stone-400">&copy; 2026 BetweenVisits</p>
+          <p className="text-sm text-white/40">&copy; 2026 BetweenVisits</p>
           <div className="flex gap-5">
             <a
               href="#"
-              className="text-stone-400 hover:text-stone-700 transition-colors"
+              className="text-white/40 hover:text-white/80 transition-colors"
               aria-label="LinkedIn"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -16,7 +16,7 @@ export function Footer() {
             </a>
             <a
               href="#"
-              className="text-stone-400 hover:text-stone-700 transition-colors"
+              className="text-white/40 hover:text-white/80 transition-colors"
               aria-label="GitHub"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">

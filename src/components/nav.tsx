@@ -1,45 +1,53 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const links = [
-    { href: "#solution", label: "Solution" },
-    { href: "#journey", label: "Journey" },
-    { href: "#demo", label: "Demo" },
-    { href: "#team", label: "Team" },
+    { href: "/problem", label: "Problem" },
+    { href: "/solution", label: "Solution" },
+    { href: "/market", label: "Market" },
+    { href: "/demo", label: "Demo" },
+    { href: "/team", label: "Team" },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-surface-0/90 backdrop-blur-sm border-b border-stone-200/60">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md border-b border-white/10">
       <div className="max-w-[1200px] mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="text-stone-900 font-bold text-lg tracking-tight">
+        <Link href="/" className="text-white font-bold text-lg tracking-tight">
           BetweenVisits
-        </a>
+        </Link>
 
         <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
-              className="text-stone-500 hover:text-stone-900 text-sm transition-colors"
+              className={`text-sm transition-colors ${
+                pathname === link.href
+                  ? "text-white font-medium"
+                  : "text-white/60 hover:text-white"
+              }`}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#contact"
-            className="bg-stone-900 hover:bg-stone-800 text-white text-sm font-medium px-5 py-2.5 rounded-lg transition-colors active:scale-[0.98]"
+          <Link
+            href="/contact"
+            className="bg-white hover:bg-white/90 text-stone-900 text-sm font-medium px-5 py-2.5 rounded-lg transition-colors active:scale-[0.98]"
           >
             Contact
-          </a>
+          </Link>
         </div>
 
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-stone-700 p-2 -mr-2"
+          className="md:hidden text-white/70 p-2 -mr-2"
           aria-label="Toggle menu"
         >
           <svg
@@ -59,24 +67,28 @@ export function Nav() {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden px-6 pb-4 border-t border-stone-100">
+        <div className="md:hidden px-6 pb-4 border-t border-white/10 bg-black/60 backdrop-blur-md">
           {links.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="block py-3 text-stone-600 text-sm border-b border-stone-100"
+              className={`block py-3 text-sm border-b border-white/10 ${
+                pathname === link.href
+                  ? "text-white font-medium"
+                  : "text-white/60"
+              }`}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             onClick={() => setMenuOpen(false)}
-            className="block py-3 text-stone-900 text-sm font-medium"
+            className="block py-3 text-white text-sm font-medium"
           >
             Contact
-          </a>
+          </Link>
         </div>
       )}
     </nav>
