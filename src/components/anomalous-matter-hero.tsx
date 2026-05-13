@@ -1,12 +1,15 @@
+"use client";
+
 import React, { useRef, useEffect, Suspense } from "react";
 import * as THREE from "three";
 
 export function GenerativeArtScene() {
-  const mountRef = useRef(null);
-  const lightRef = useRef(null);
+  const mountRef = useRef<HTMLDivElement>(null);
+  const lightRef = useRef<THREE.PointLight>(null);
 
   useEffect(() => {
     const currentMount = mountRef.current;
+    if (!currentMount) return;
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       75,
@@ -16,12 +19,12 @@ export function GenerativeArtScene() {
     );
     camera.position.z = 3;
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" });
     renderer.setSize(currentMount.clientWidth, currentMount.clientHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     currentMount.appendChild(renderer.domElement);
 
-    const geometry = new THREE.IcosahedronGeometry(1.2, 64);
+    const geometry = new THREE.IcosahedronGeometry(1.2, 24);
     const material = new THREE.ShaderMaterial({
       uniforms: {
         time: { value: 0 },
@@ -115,11 +118,17 @@ export function GenerativeArtScene() {
     lightRef.current = pointLight;
     scene.add(pointLight);
 
-    let frameId;
-    const animate = (t) => {
+    const targetLightPos = new THREE.Vector3(0, 0, 5);
+    const currentLightPos = new THREE.Vector3(0, 0, 5);
+
+    let frameId: number;
+    const animate = (t: number) => {
       material.uniforms.time.value = t * 0.0003;
       mesh.rotation.y += 0.0005;
       mesh.rotation.x += 0.0002;
+      currentLightPos.lerp(targetLightPos, 0.05);
+      if (lightRef.current) lightRef.current.position.copy(currentLightPos);
+      material.uniforms.pointLightPos.value.copy(currentLightPos);
       renderer.render(scene, camera);
       frameId = requestAnimationFrame(animate);
     };
@@ -131,19 +140,14 @@ export function GenerativeArtScene() {
       renderer.setSize(currentMount.clientWidth, currentMount.clientHeight);
     };
 
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       const x = (e.clientX / window.innerWidth) * 2 - 1;
       const y = -(e.clientY / window.innerHeight) * 2 + 1;
-      const vec = new THREE.Vector3(x, y, 0.5).unproject(camera);
-      const dir = vec.sub(camera.position).normalize();
-      const dist = -camera.position.z / dir.z;
-      const pos = camera.position.clone().add(dir.multiplyScalar(dist));
-      lightRef.current.position.copy(pos);
-      material.uniforms.pointLightPos.value = pos;
+      targetLightPos.set(x * 3, y * 3, 5);
     };
 
     window.addEventListener("resize", handleResize);
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
 
     return () => {
       cancelAnimationFrame(frameId);

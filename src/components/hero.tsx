@@ -1,9 +1,13 @@
+"use client";
+
 import Link from "next/link";
+import { GenerativeArtScene } from "@/components/anomalous-matter-hero";
 
 export function Hero() {
   return (
     <section className="min-h-[100dvh] flex items-center relative overflow-hidden">
-      <div className="max-w-[1200px] mx-auto px-6 w-full relative pt-24 pb-16">
+      <GenerativeArtScene />
+      <div className="max-w-[1200px] mx-auto px-6 w-full relative z-10 pt-24 pb-16">
         <div className="md:grid md:grid-cols-[1.4fr_1fr] md:gap-16 md:items-center">
           <div>
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-8 relative overflow-hidden">
