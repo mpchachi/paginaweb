@@ -1,5 +1,4 @@
 import { Market } from "@/components/market";
-import { Competition } from "@/components/competition";
 import { GlobeSection } from "@/components/globe-section";
 
 export const metadata = {
@@ -11,7 +10,6 @@ export default function MarketPage() {
     <>
       <Market />
       <GlobeSection />
-      <Competition />
     </>
   );
 }

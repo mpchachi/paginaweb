@@ -13,7 +13,7 @@ export function Competition() {
     <section id="competition" className="py-24 md:py-32 border-t border-white/10">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="mb-12 animate-on-scroll">
-          <p className="text-xs font-medium text-amber-400 uppercase tracking-wider mb-3">
+          <p className="text-xs font-medium text-white/40 uppercase tracking-wider mb-3">
             Competitive landscape
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">
@@ -54,15 +54,15 @@ export function Competition() {
               </span>
             </div>
           ))}
-          <div className="grid grid-cols-[1fr_auto_auto] gap-4 px-5 py-5 items-center bg-amber-400/10 border-t-2 border-amber-400/20">
-            <span className="text-sm font-bold text-amber-300">
+          <div className="grid grid-cols-[1fr_auto_auto] gap-4 px-5 py-5 items-center bg-white/[0.07] border-t-2 border-white/20">
+            <span className="text-sm font-bold text-white">
               SteadyArc
             </span>
-            <span className="text-xs font-medium text-amber-400 text-center w-32">
+            <span className="text-xs font-medium text-white/70 text-center w-32">
               Software-only (motor + visual)
             </span>
             <span className="text-center w-28">
-              <span className="inline-flex items-center gap-1 text-xs font-bold text-white bg-amber-500 px-2.5 py-1 rounded-full">
+              <span className="inline-flex items-center gap-1 text-xs font-bold text-black bg-white px-2.5 py-1 rounded-full">
                 Yes
               </span>
             </span>
@@ -83,9 +83,7 @@ export function Competition() {
                 "Works on any device with a camera",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2.5 text-sm text-white/60">
-                  <svg className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
-                  </svg>
+                  <span className="w-1 h-1 rounded-full bg-white/40 mt-2 flex-shrink-0" />
                   {item}
                 </li>
               ))}

@@ -29,7 +29,7 @@ export function GenerativeArtScene() {
       uniforms: {
         time: { value: 0 },
         pointLightPos: { value: new THREE.Vector3(0, 0, 5) },
-        color: { value: new THREE.Color("hsl(var(--sky-300))") },
+        color: { value: new THREE.Color(0.6, 0.55, 0.45) },
       },
       vertexShader: `                uniform float time;
                 varying vec3 vNormal;

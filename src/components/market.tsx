@@ -7,7 +7,7 @@ export function Market() {
     <section id="market" className="pt-32 pb-24 md:pt-40 md:pb-32">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="mb-16 animate-on-scroll">
-          <p className="text-xs font-medium text-amber-400 uppercase tracking-wider mb-3">
+          <p className="text-xs font-medium text-white/40 uppercase tracking-wider mb-3">
             Market opportunity
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">
@@ -42,14 +42,14 @@ export function Market() {
               Post-stroke rehab monitoring in U.S., Germany, France, Spain
             </p>
           </div>
-          <div className="animate-on-scroll delay-3 border border-amber-400/20 rounded-2xl p-7 bg-amber-400/10 text-center">
-            <p className="text-xs font-medium text-amber-400 uppercase tracking-wider mb-3">
+          <div className="animate-on-scroll delay-3 border border-white/15 rounded-2xl p-7 bg-white/[0.07] text-center">
+            <p className="text-xs font-medium text-white/50 uppercase tracking-wider mb-3">
               SOM (Year 3)
             </p>
-            <p className="text-4xl font-bold text-amber-400 mb-2">
+            <p className="text-4xl font-bold text-white mb-2">
               0.5-1%
             </p>
-            <p className="text-sm text-white/60 leading-relaxed">
+            <p className="text-sm text-white/50 leading-relaxed">
               500-1,000 subscribers or 5,000-15,000 monthly active patients
             </p>
           </div>
@@ -65,14 +65,12 @@ export function Market() {
                 "Rising stroke prevalence globally",
                 "Increasing strain on rehabilitation workforces",
                 "Shift toward digital health and remote care",
-                "Computer vision / AI now accessible without hardware",
+                "Computer vision now accessible without hardware",
                 "Value-based care models incentivize outcomes",
                 "Patients already have cameras on their phones",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3">
-                  <svg className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                  </svg>
+                  <span className="w-1 h-1 rounded-full bg-white/30 mt-2 flex-shrink-0" />
                   <span className="text-sm text-white/60">{item}</span>
                 </div>
               ))}

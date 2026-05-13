@@ -3,7 +3,7 @@ export function Value() {
     <section id="value" className="py-24 md:py-32 border-t border-white/10">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="mb-16 animate-on-scroll">
-          <p className="text-xs font-medium text-amber-400 uppercase tracking-wider mb-3">
+          <p className="text-xs font-medium text-white/40 uppercase tracking-wider mb-3">
             Value proposition
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">
@@ -58,9 +58,7 @@ export function Value() {
               <ul className="space-y-3">
                 {group.items.map((item) => (
                   <li key={item} className="flex items-start gap-2.5 text-sm text-white/50 leading-relaxed">
-                    <svg className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
-                    </svg>
+                    <span className="w-1 h-1 rounded-full bg-white/30 mt-2 flex-shrink-0" />
                     {item}
                   </li>
                 ))}
@@ -84,7 +82,7 @@ export function Value() {
                 { label: "Financial protection", desc: "Reduced unnecessary visits and costs", icon: "+" },
               ].map((item) => (
                 <div key={item.label} className="flex gap-3">
-                  <span className="w-6 h-6 rounded-md bg-white/10 text-amber-400 flex items-center justify-center text-xs font-bold flex-shrink-0">
+                  <span className="w-6 h-6 rounded-md bg-white/10 text-white/50 flex items-center justify-center text-xs font-bold flex-shrink-0">
                     {item.icon}
                   </span>
                   <div>

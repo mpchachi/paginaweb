@@ -12,14 +12,9 @@ export function Team() {
     <section id="team" className="pt-32 pb-24 md:pt-40 md:pb-32">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="mb-16 animate-on-scroll">
-          <div className="inline-flex items-center gap-2 bg-white/10 border border-amber-400/20 rounded-full px-4 py-1.5 mb-6">
-            <svg className="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clipRule="evenodd" />
-            </svg>
-            <span className="text-xs font-semibold text-amber-300">
-              Harvard HSIL 2026 Winners
-            </span>
-          </div>
+          <p className="text-xs font-medium text-white/40 uppercase tracking-wider mb-6">
+            Harvard HSIL 2026 Winners
+          </p>
           <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">
             The team
           </h2>

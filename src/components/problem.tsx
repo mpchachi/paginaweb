@@ -8,7 +8,7 @@ export function Problem() {
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="md:grid md:grid-cols-[1fr_2fr] md:gap-16">
           <div className="mb-12 md:mb-0 animate-on-scroll">
-            <p className="text-xs font-medium text-amber-400 uppercase tracking-wider mb-3">
+            <p className="text-xs font-medium text-white/40 uppercase tracking-wider mb-3">
               Problem definition
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">
@@ -23,7 +23,7 @@ export function Problem() {
 
           <div className="space-y-10">
             <div className="animate-on-scroll delay-1">
-              <div className="border-l-4 border-amber-400 pl-6 py-1">
+              <div className="border-l-2 border-white/20 pl-6 py-1">
                 <p className="text-xl md:text-2xl font-semibold text-white/90 leading-snug mb-3">
                   "I only see my patients once every few weeks. Between visits,
                   I have no idea if they're improving or getting worse."
@@ -51,11 +51,11 @@ export function Problem() {
                   Survivors needing ongoing rehabilitation
                 </p>
               </div>
-              <div className="border border-amber-400/30 rounded-xl p-6 bg-amber-400/5 text-center stat-glow">
-                <p className="text-3xl font-bold text-amber-400 mb-1">
+              <div className="border border-white/15 rounded-xl p-6 bg-white/[0.07] text-center">
+                <p className="text-3xl font-bold text-white mb-1">
                   <Counter end={673} />
                 </p>
-                <p className="text-sm text-white/60">
+                <p className="text-sm text-white/50">
                   Post-stroke patients per clinician
                 </p>
               </div>
