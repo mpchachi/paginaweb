@@ -1,15 +1,15 @@
 export function Value() {
   return (
-    <section id="value" className="py-24 md:py-32 border-t border-white/10">
+    <section id="value" className="py-24 md:py-32 border-t border-slate-200/70">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="mb-16 animate-on-scroll">
-          <p className="text-xs font-medium text-white/40 uppercase tracking-wider mb-3">
+          <p className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-3">
             Value proposition
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-4">
             Value for every stakeholder
           </h2>
-          <p className="text-white/50 leading-relaxed max-w-[60ch]">
+          <p className="text-slate-500 leading-relaxed max-w-[60ch]">
             SteadyArc creates measurable value across the entire care chain.
           </p>
         </div>
@@ -18,7 +18,6 @@ export function Value() {
           {[
             {
               label: "For clinicians",
-              color: "bg-white/10",
               items: [
                 "Continuous visibility into recovery between visits",
                 "Data-driven decisions instead of patient recall",
@@ -28,7 +27,6 @@ export function Value() {
             },
             {
               label: "For patients",
-              color: "bg-amber-500",
               items: [
                 "Engaging rehabilitation — not repetitive exercises",
                 "Feel supported between appointments",
@@ -38,7 +36,6 @@ export function Value() {
             },
             {
               label: "For health systems",
-              color: "bg-stone-700",
               items: [
                 "More patients monitored, same resources",
                 "Reduced long-term costs and complications",
@@ -49,16 +46,15 @@ export function Value() {
           ].map((group, i) => (
             <div
               key={group.label}
-              className={`animate-on-scroll delay-${i + 1} border border-white/10 rounded-2xl p-7 bg-white/5 hover:shadow-lg hover:shadow-black/100/50 transition-shadow`}
+              className={`animate-on-scroll delay-${i + 1} border border-slate-200 rounded-2xl p-7 bg-white/60 hover:shadow-md transition-shadow`}
             >
-              <div className={`w-3 h-3 rounded-full ${group.color} mb-5`} />
-              <h3 className="text-lg font-semibold text-white mb-4">
+              <h3 className="text-lg font-semibold text-slate-900 mb-4">
                 {group.label}
               </h3>
               <ul className="space-y-3">
                 {group.items.map((item) => (
-                  <li key={item} className="flex items-start gap-2.5 text-sm text-white/50 leading-relaxed">
-                    <span className="w-1 h-1 rounded-full bg-white/30 mt-2 flex-shrink-0" />
+                  <li key={item} className="flex items-start gap-2.5 text-sm text-slate-500 leading-relaxed">
+                    <span className="w-1 h-1 rounded-full bg-slate-300 mt-2 flex-shrink-0" />
                     {item}
                   </li>
                 ))}
@@ -67,9 +63,9 @@ export function Value() {
           ))}
         </div>
 
-        <div className="animate-on-scroll delay-4 border border-white/10 rounded-2xl bg-white/5 overflow-hidden">
+        <div className="animate-on-scroll delay-4 border border-slate-200 rounded-2xl bg-white/60 overflow-hidden">
           <div className="p-8 md:p-10">
-            <h3 className="text-lg font-semibold text-white mb-6">
+            <h3 className="text-lg font-semibold text-slate-900 mb-6">
               Health system impact
             </h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -82,14 +78,14 @@ export function Value() {
                 { label: "Financial protection", desc: "Reduced unnecessary visits and costs", icon: "+" },
               ].map((item) => (
                 <div key={item.label} className="flex gap-3">
-                  <span className="w-6 h-6 rounded-md bg-white/10 text-white/50 flex items-center justify-center text-xs font-bold flex-shrink-0">
+                  <span className="w-6 h-6 rounded-md bg-slate-100 text-slate-500 flex items-center justify-center text-xs font-bold flex-shrink-0">
                     {item.icon}
                   </span>
                   <div>
-                    <p className="text-sm font-semibold text-white mb-0.5">
+                    <p className="text-sm font-semibold text-slate-900 mb-0.5">
                       {item.label}
                     </p>
-                    <p className="text-sm text-white/50">{item.desc}</p>
+                    <p className="text-sm text-slate-500">{item.desc}</p>
                   </div>
                 </div>
               ))}

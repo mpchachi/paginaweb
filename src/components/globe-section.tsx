@@ -49,16 +49,16 @@ const markers: GlobeMarker[] = [
 
 export function GlobeSection() {
   return (
-    <section className="py-24 md:py-32 border-t border-white/10 overflow-hidden">
+    <section className="py-24 md:py-32 border-t border-slate-200/70 overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="text-center mb-8 animate-on-scroll">
-          <p className="text-xs font-medium text-white/40 uppercase tracking-wider mb-3">
+          <p className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-3">
             Go-to-market
           </p>
-          <h2 className="font-bold text-3xl md:text-4xl text-white tracking-tight">
+          <h2 className="font-bold text-3xl md:text-4xl text-slate-900 tracking-tight">
             From Madrid to the world
           </h2>
-          <p className="text-sm md:text-base text-white/50 max-w-2xl mx-auto mt-4 leading-relaxed">
+          <p className="text-sm md:text-base text-slate-500 max-w-2xl mx-auto mt-4 leading-relaxed">
             Starting in Spain, expanding to the U.S., Germany, and France —
             targeting the largest post-stroke rehabilitation markets where remote
             monitoring is most needed.
@@ -70,7 +70,7 @@ export function GlobeSection() {
         markers={markers}
         className="h-[450px] md:h-[550px]"
         config={{
-          atmosphereColor: "#c45f27",
+          atmosphereColor: "#6482b9",
           atmosphereIntensity: 0.4,
           showAtmosphere: true,
           bumpScale: 3,
@@ -89,9 +89,9 @@ export function GlobeSection() {
             { city: "Berlin", label: "DiGA Pathway" },
             { city: "Paris", label: "EU Expansion" },
           ].map((item) => (
-            <div key={item.city} className="text-center p-4 rounded-xl bg-white/5 border border-white/10">
-              <p className="text-sm font-semibold text-white">{item.city}</p>
-              <p className="text-xs text-white/50 mt-0.5">{item.label}</p>
+            <div key={item.city} className="text-center p-4 rounded-xl bg-white/60 border border-slate-200">
+              <p className="text-sm font-semibold text-slate-900">{item.city}</p>
+              <p className="text-xs text-slate-500 mt-0.5">{item.label}</p>
             </div>
           ))}
         </div>

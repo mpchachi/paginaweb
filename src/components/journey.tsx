@@ -24,14 +24,14 @@ const steps = [
 
 export function Journey() {
   return (
-    <section id="journey" className="py-24 md:py-32 border-t border-white/10">
+    <section id="journey" className="py-24 md:py-32 border-t border-slate-200/70">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="md:grid md:grid-cols-[1fr_2fr] md:gap-16">
           <div className="mb-12 md:mb-0 animate-on-scroll">
-            <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-4">
               Our journey
             </h2>
-            <p className="text-white/50 leading-relaxed">
+            <p className="text-slate-500 leading-relaxed">
               From physical sensors to pure computer vision. Three pivots in
               under two years — each one reducing friction and increasing
               accessibility.
@@ -43,23 +43,23 @@ export function Journey() {
               <div key={i} className={`animate-on-scroll delay-${i + 1} grid grid-cols-[auto_1fr] gap-5`}>
                 <div className="flex flex-col items-center">
                   <span
-                    className={`w-10 h-10 rounded-full text-white text-sm font-bold flex items-center justify-center shadow-lg ${
+                    className={`w-10 h-10 rounded-full text-white text-sm font-bold flex items-center justify-center ${
                       step.accent
-                        ? "bg-amber-500 shadow-brand-200"
-                        : "bg-white/10 shadow-black/300"
+                        ? "bg-slate-900"
+                        : "bg-slate-200 text-slate-600"
                     }`}
                   >
                     {step.number}
                   </span>
                   {i < steps.length - 1 && (
-                    <div className="w-px flex-1 bg-gradient-to-b from-stone-300 to-stone-100 mt-3" />
+                    <div className="w-px flex-1 bg-slate-200 mt-3" />
                   )}
                 </div>
                 <div className={`${i < steps.length - 1 ? "pb-10" : ""}`}>
-                  <h3 className="text-lg font-semibold text-white mb-2">
+                  <h3 className="text-lg font-semibold text-slate-900 mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-white/50 leading-relaxed">
+                  <p className="text-slate-500 leading-relaxed">
                     {step.description}
                   </p>
                 </div>

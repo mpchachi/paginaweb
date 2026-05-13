@@ -12,13 +12,13 @@ export function Team() {
     <section id="team" className="pt-32 pb-24 md:pt-40 md:pb-32">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="mb-16 animate-on-scroll">
-          <p className="text-xs font-medium text-white/40 uppercase tracking-wider mb-6">
+          <p className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-6">
             Harvard HSIL 2026 Winners
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-4">
             The team
           </h2>
-          <p className="text-white/50 max-w-[55ch] leading-relaxed">
+          <p className="text-slate-500 max-w-[55ch] leading-relaxed">
             Engineers, clinicians, and researchers. We build rehabilitation tools
             that work without expensive equipment — validated at Harvard's Health
             Systems Innovation Lab.
@@ -29,18 +29,18 @@ export function Team() {
           {members.map((member, i) => (
             <div
               key={member.name}
-              className={`animate-on-scroll delay-${Math.min(i + 1, 5)} flex items-center gap-4 border border-white/10 rounded-xl p-5 bg-white/5 hover:shadow-md hover:border-white/20 transition-all`}
+              className={`animate-on-scroll delay-${Math.min(i + 1, 5)} flex items-center gap-4 border border-slate-200 rounded-xl p-5 bg-white/60 hover:shadow-md hover:border-slate-300 transition-all`}
             >
-              <div className="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
-                <span className="text-sm font-bold text-white/60">
+              <div className="w-11 h-11 rounded-full bg-slate-100 flex items-center justify-center flex-shrink-0">
+                <span className="text-sm font-bold text-slate-500">
                   {member.initials}
                 </span>
               </div>
               <div>
-                <p className="text-base font-semibold text-white">
+                <p className="text-base font-semibold text-slate-900">
                   {member.name}
                 </p>
-                <p className="text-sm text-white/50">{member.role}</p>
+                <p className="text-sm text-slate-500">{member.role}</p>
               </div>
             </div>
           ))}

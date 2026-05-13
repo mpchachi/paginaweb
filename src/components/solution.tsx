@@ -64,67 +64,63 @@ export function Solution() {
   return (
     <section id="how-it-works" className="pt-32 pb-24 md:pt-40 md:pb-32">
       <div className="max-w-[1200px] mx-auto px-6">
-        {/* Header */}
         <div className="text-center mb-10">
-          <p className="text-xs font-medium text-white/40 uppercase tracking-wider mb-3">
+          <p className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-3">
             What we capture
           </p>
-          <h2 className="text-3xl font-bold text-white md:text-4xl tracking-tight mb-4">
+          <h2 className="text-3xl font-bold text-slate-900 md:text-4xl tracking-tight mb-4">
             One camera. Three modalities.
           </h2>
-          <p className="text-white/50 max-w-[50ch] mx-auto">
+          <p className="text-slate-500 max-w-[50ch] mx-auto">
             Everything a clinician checks in a 15-minute visit — captured
             automatically every time the patient plays.
           </p>
         </div>
 
-        {/* Tabs */}
         <Tabs defaultValue="hand" className="mt-6">
           <TabsList className="flex items-center justify-center gap-3 mb-8">
             {tabs.map((tab) => (
               <TabsTrigger
                 key={tab.value}
                 value={tab.value}
-                className="flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-white/50 transition-all cursor-pointer hover:bg-white/10 hover:text-white/80 data-[state=active]:bg-white data-[state=active]:text-black data-[state=active]:border-white data-[state=active]:shadow-lg data-[state=active]:shadow-white/10"
+                className="flex items-center gap-2.5 rounded-full border border-slate-200 bg-white/60 px-6 py-3 text-sm font-medium text-slate-500 transition-all cursor-pointer hover:bg-white hover:text-slate-700 data-[state=active]:bg-slate-900 data-[state=active]:text-white data-[state=active]:border-slate-900"
               >
                 {tab.icon} {tab.label}
               </TabsTrigger>
             ))}
           </TabsList>
 
-          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 lg:p-10">
+          <div className="rounded-2xl border border-slate-200 bg-white/60 p-6 lg:p-10">
             {tabs.map((tab) => (
               <TabsContent
                 key={tab.value}
                 value={tab.value}
                 className="grid place-items-center gap-8 lg:grid-cols-2 lg:gap-12"
               >
-                {/* Text */}
                 <div className="flex flex-col gap-4">
-                  <h3 className="text-2xl font-bold text-white lg:text-3xl leading-tight">
+                  <h3 className="text-2xl font-bold text-slate-900 lg:text-3xl leading-tight">
                     {tab.title}
                   </h3>
-                  <p className="text-white/50 leading-relaxed">
+                  <p className="text-slate-500 leading-relaxed">
                     {tab.description}
                   </p>
                   <div className="grid grid-cols-2 gap-2 mt-3">
                     {tab.metrics.map((m) => (
                       <div
                         key={m}
-                        className="flex items-center gap-2 rounded-lg bg-white/5 px-3 py-2"
+                        className="flex items-center gap-2 rounded-lg bg-slate-50 px-3 py-2"
                       >
-                        <span className="w-1.5 h-1.5 rounded-full bg-white/30 flex-shrink-0" />
-                        <span className="text-xs text-white/60">{m}</span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-slate-300 flex-shrink-0" />
+                        <span className="text-xs text-slate-600">{m}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                {/* Image */}
                 <img
                   src={tab.imageSrc}
                   alt={tab.imageAlt}
-                  className="rounded-xl border border-white/10 w-full object-cover max-h-[380px]"
+                  className="rounded-xl border border-slate-200 w-full object-cover max-h-[380px]"
                 />
               </TabsContent>
             ))}

@@ -3,7 +3,7 @@ import { Playfair_Display, JetBrains_Mono } from "next/font/google";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { ScrollProvider } from "@/components/scroll-provider";
-import { AnimatedBackground } from "@/components/ui/animated-background";
+import { BackgroundComponents } from "@/components/background-components";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
@@ -34,8 +34,8 @@ export default function RootLayout({
       lang="en"
       className={cn("antialiased", playfair.variable, jetbrainsMono.variable)}
     >
-      <body className="min-h-dvh flex flex-col font-sans text-white">
-        <AnimatedBackground />
+      <body className="min-h-dvh flex flex-col font-sans text-slate-900">
+        <BackgroundComponents />
         <ScrollProvider>
           <Nav />
           <main className="flex-1">{children}</main>

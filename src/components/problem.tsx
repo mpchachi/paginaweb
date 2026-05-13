@@ -8,13 +8,13 @@ export function Problem() {
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="md:grid md:grid-cols-[1fr_2fr] md:gap-16">
           <div className="mb-12 md:mb-0 animate-on-scroll">
-            <p className="text-xs font-medium text-white/40 uppercase tracking-wider mb-3">
+            <p className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-3">
               Problem definition
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-4">
               The invisible gap in stroke recovery
             </h2>
-            <p className="text-white/50 leading-relaxed">
+            <p className="text-slate-500 leading-relaxed">
               Stroke recovery is time-sensitive — especially during the 12-week
               neuroplasticity window. But clinical monitoring only happens during
               occasional visits. Everything else is invisible.
@@ -23,46 +23,46 @@ export function Problem() {
 
           <div className="space-y-10">
             <div className="animate-on-scroll delay-1">
-              <div className="border-l-2 border-white/20 pl-6 py-1">
-                <p className="text-xl md:text-2xl font-semibold text-white/90 leading-snug mb-3">
+              <div className="border-l-2 border-slate-200 pl-6 py-1">
+                <p className="text-xl md:text-2xl font-semibold text-slate-700 leading-snug mb-3">
                   "I only see my patients once every few weeks. Between visits,
                   I have no idea if they're improving or getting worse."
                 </p>
-                <p className="text-sm text-white/40">
+                <p className="text-sm text-slate-400">
                   — Neurologist, Hospital Ruber Internacional, Madrid
                 </p>
               </div>
             </div>
 
             <div className="grid sm:grid-cols-3 gap-5 animate-on-scroll delay-2">
-              <div className="border border-white/10 rounded-xl p-6 bg-white/5 text-center">
-                <p className="text-3xl font-bold text-white mb-1">
+              <div className="border border-slate-200 rounded-xl p-6 bg-white/60 text-center">
+                <p className="text-3xl font-bold text-slate-900 mb-1">
                   <Counter end={795} suffix="K+" />
                 </p>
-                <p className="text-sm text-white/50">
+                <p className="text-sm text-slate-500">
                   New strokes per year in the U.S.
                 </p>
               </div>
-              <div className="border border-white/10 rounded-xl p-6 bg-white/5 text-center">
-                <p className="text-3xl font-bold text-white mb-1">
+              <div className="border border-slate-200 rounded-xl p-6 bg-white/60 text-center">
+                <p className="text-3xl font-bold text-slate-900 mb-1">
                   <Counter end={9} suffix="M+" />
                 </p>
-                <p className="text-sm text-white/50">
+                <p className="text-sm text-slate-500">
                   Survivors needing ongoing rehabilitation
                 </p>
               </div>
-              <div className="border border-white/15 rounded-xl p-6 bg-white/[0.07] text-center">
-                <p className="text-3xl font-bold text-white mb-1">
+              <div className="border border-slate-300 rounded-xl p-6 bg-white/80 text-center">
+                <p className="text-3xl font-bold text-slate-900 mb-1">
                   <Counter end={673} />
                 </p>
-                <p className="text-sm text-white/50">
+                <p className="text-sm text-slate-500">
                   Post-stroke patients per clinician
                 </p>
               </div>
             </div>
 
             <div className="animate-on-scroll delay-3">
-              <h3 className="text-lg font-semibold text-white mb-4">
+              <h3 className="text-lg font-semibold text-slate-900 mb-4">
                 Why this keeps happening
               </h3>
               <div className="grid sm:grid-cols-2 gap-3">
@@ -74,10 +74,10 @@ export function Problem() {
                 ].map((item) => (
                   <div
                     key={item.text}
-                    className="flex items-start gap-3 bg-white/5 border border-white/10 rounded-lg p-4"
+                    className="flex items-start gap-3 bg-white/60 border border-slate-200 rounded-lg p-4"
                   >
-                    <span className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg className="w-4 h-4 text-white/70" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                    <span className="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <svg className="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                         {item.icon === "clock" && (
                           <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                         )}
@@ -92,7 +92,7 @@ export function Problem() {
                         )}
                       </svg>
                     </span>
-                    <span className="text-sm text-white/60 leading-snug">
+                    <span className="text-sm text-slate-600 leading-snug">
                       {item.text}
                     </span>
                   </div>
@@ -100,11 +100,11 @@ export function Problem() {
               </div>
             </div>
 
-            <div className="animate-on-scroll delay-4 bg-white/5 border border-white/10 rounded-2xl p-8 text-white">
-              <p className="text-sm font-medium text-white/40 mb-3 uppercase tracking-wider">
+            <div className="animate-on-scroll delay-4 bg-white/60 border border-slate-200 rounded-2xl p-8">
+              <p className="text-sm font-medium text-slate-400 mb-3 uppercase tracking-wider">
                 The consequence
               </p>
-              <p className="text-lg leading-relaxed text-white/70">
+              <p className="text-lg leading-relaxed text-slate-600">
                 Without continuous monitoring, patients risk delayed
                 interventions, inefficient therapy, and worse long-term outcomes
                 — including permanent disability. Recovery time is lost that

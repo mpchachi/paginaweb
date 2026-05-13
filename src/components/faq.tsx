@@ -28,28 +28,28 @@ const faqs = [
 
 export function Faq() {
   return (
-    <section className="py-24 md:py-32 border-t border-white/10">
+    <section className="py-24 md:py-32 border-t border-slate-200/70">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="text-center mb-14">
-          <span className="text-xs font-medium text-white/40 uppercase tracking-wider">
+          <span className="text-xs font-medium text-slate-400 uppercase tracking-wider">
             FAQ
           </span>
-          <h2 className="mt-4 text-3xl md:text-4xl font-bold text-white tracking-tight">
+          <h2 className="mt-4 text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
             Questions
           </h2>
-          <p className="mt-4 text-white/50 max-w-[45ch] mx-auto">
+          <p className="mt-4 text-slate-500 max-w-[45ch] mx-auto">
             What clinicians, patients, and investors usually ask us.
           </p>
         </div>
         <div className="mx-auto max-w-screen-sm">
           {faqs.map((faq, index) => (
             <div key={index} className="mb-8 flex gap-4">
-              <span className="flex size-6 shrink-0 items-center justify-center rounded-sm bg-white/10 font-mono text-xs text-white/60">
+              <span className="flex size-6 shrink-0 items-center justify-center rounded-sm bg-slate-100 font-mono text-xs text-slate-500">
                 {index + 1}
               </span>
               <div>
-                <h3 className="font-medium text-white mb-2">{faq.question}</h3>
-                <p className="text-sm text-white/50 leading-relaxed">{faq.answer}</p>
+                <h3 className="font-medium text-slate-900 mb-2">{faq.question}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">{faq.answer}</p>
               </div>
             </div>
           ))}

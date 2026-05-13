@@ -6,15 +6,15 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <section className="py-20 md:py-24 bg-white/5 backdrop-blur-sm relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "32px 32px" }} />
+      <section className="py-20 md:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, rgba(0,0,0,0.4) 1px, transparent 0)", backgroundSize: "32px 32px" }} />
         <div className="max-w-[1200px] mx-auto px-6 relative">
           <div className="md:grid md:grid-cols-[1.5fr_1fr] md:gap-12 md:items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-4">
                 Help us validate the future of remote rehab
               </h2>
-              <p className="text-white/50 leading-relaxed max-w-[50ch]">
+              <p className="text-slate-500 leading-relaxed max-w-[50ch]">
                 We're looking for clinicians, rehabilitation teams, and hospitals
                 to join our pilot program. Your expertise helps build tools that
                 actually work in real clinical settings.
@@ -23,7 +23,7 @@ export default function Home() {
             <div className="mt-8 md:mt-0 md:text-right">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-white text-stone-900 font-medium px-7 py-3.5 rounded-lg transition-all hover:bg-white/90 active:scale-[0.98] shadow-lg shadow-black/20"
+                className="inline-flex items-center gap-2 bg-slate-900 text-white font-medium px-7 py-3.5 rounded-lg transition-all hover:bg-slate-800 active:scale-[0.98]"
               >
                 Join the pilot
                 <svg
